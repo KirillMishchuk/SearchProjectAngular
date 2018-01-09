@@ -1,0 +1,9 @@
+<app-form (searchList)="search($event)"></app-form>
+
+<app-list [list]="list"
+          [isEmpty]="isEmpty"
+          (delete)="deleteItem($event)"
+          (toggle)="toggleItem($event)"
+          (add)="addItem($event)"
+          (view)="viewItem($event)">
+</app-list>

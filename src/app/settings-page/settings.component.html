@@ -1,0 +1,7 @@
+<form>
+  <h2>Количество результатов поиска:</h2>
+  <div class="fields">
+    <input [(ngModel)]="maxResults" name="results" type="text" placeholder="Введите максимальное количество результатов"/>
+    <input type="submit" value="Применить" (click)="onChange()" />
+  </div>
+</form>

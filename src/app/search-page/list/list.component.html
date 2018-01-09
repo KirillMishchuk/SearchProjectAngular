@@ -1,0 +1,14 @@
+<main>
+  <ul class="results" *ngIf="list">
+    <app-list-item *ngFor="let i of list; let index = index;"
+                   [item]="i"
+                   [index]="index"
+                   (delete)="onDelete($event)"
+                   (toggle)="onToggle($event)"
+                   (add)="onAdd($event)"
+                   (view)="onView($event)">
+    </app-list-item>
+    <h3 *ngIf="list.length">Показано результатов: {{list.length}}</h3>
+  </ul>
+    <h1 *ngIf="isEmpty">Поиск не дал результатов :(</h1>
+</main>

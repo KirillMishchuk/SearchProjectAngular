@@ -1,0 +1,19 @@
+<form (submit)="onSubmit(searchForm)" #searchForm="ngForm"> <!--доступ к объекту формы-->
+  <div class="fields">
+    <input [(ngModel)]="query"
+           appFocus
+           [submitBtn]="submitBtn"
+           ngModel
+           autofocus
+           required
+           type="search"
+           name="search"
+           [placeholder]="placeholder"/>
+    <input type="submit"
+           value="Поиск"
+           [disabled]="searchForm.invalid"
+           #submitBtn
+           />
+           <!-- [class.button-focus]="checkClass()" -->
+  </div>
+</form>

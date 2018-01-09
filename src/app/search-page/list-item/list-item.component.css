@@ -1,0 +1,92 @@
+p, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  position: relative;
+  padding: 10px 0;
+  margin: 10px 0;
+  list-style: none;
+  cursor: pointer;
+}
+
+h3 {
+  color: #666;
+  transition: color 0.5s;
+}
+
+h3:hover {
+  color: #000000;
+}
+
+.action {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 220px;
+  height: 25px;
+  text-align: center;
+}
+
+[type="button"] {
+  display: inline-block;
+  color: #5E6156;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: opacity 0.5s;
+}
+
+.add {
+  width: 68%;
+}
+
+.delete {
+  width: 30%;
+}
+
+[type="button"]:hover {
+  opacity: 1;
+}
+
+.list-left {
+  float: left;
+  width: 20%;
+}
+
+.list-left img {
+  display: block;
+  width: 100%;
+  padding: 3px;
+  border: solid #ccc 1px;
+  box-sizing: border-box;
+}
+
+.list-right {
+  float: right;
+  width: 78%;
+}
+
+.red {
+  color: #dd2B26;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.marked {
+  background-color: #EEE4E2!important;
+}
+
+.added {
+  background-color: #C1FAAD!important;
+}
+
+.hovered {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+  transition: 0.5s all;
+}

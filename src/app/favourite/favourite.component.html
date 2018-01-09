@@ -1,0 +1,15 @@
+<div *ngIf="favouriteList.length; else empty">
+
+  <app-form></app-form>
+
+  <app-list [list]="favouriteList"
+            (delete)="deleteItem($event)"
+            (view)="viewItem($event)">
+  </app-list>
+
+</div>
+
+<ng-template #empty>
+  <h1>Список избранного пуст :(</h1>
+</ng-template>
+<!-- <app-list *ngFor="let item of favouriteList | search:query" [item]="item"></app-list> -->

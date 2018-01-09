@@ -1,0 +1,27 @@
+
+  <h1 *ngIf="!id && !item">Список воспроизведения пуст :(</h1>
+  <h1 *ngIf="id && !item">Загрузка видео... :)</h1>
+
+  <ul class="results" *ngIf="item">
+    <li>
+      <div>
+        <iframe [src]="viewUrl | safe"></iframe>
+      </div>
+    </li>
+    <li>
+      <div>
+        <h2>{{item.title}}</h2>
+        <small>By
+          <span class="red">{{item.channelTitle}}</span> on {{item.publishedAt}}
+        </small>
+        <p>{{item.description}}</p>
+        <p>{{item.localized}}</p>
+        <ul class="list">
+          <li>{{item.commentCount}} комментариев</li>
+          <li>{{item.likeCount}} понравилось</li>
+          <li>{{item.dislikeCount}} не понравилось</li>
+          <li>{{item.viewCount}} просмотров</li>
+        </ul>
+      </div>
+    </li>
+  </ul>

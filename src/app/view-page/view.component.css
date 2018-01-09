@@ -1,0 +1,43 @@
+p, h2, ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+.results {
+  padding: 10px 20px;
+}
+
+.results > li {
+  padding: 10px 0;
+}
+
+li {
+  list-style: none;
+}
+
+ul.list {
+  margin: 10px 0 0 0;
+  background: #DBF0DE;
+  text-align: center;
+}
+
+ul.list li {
+  width: 140px;
+  display: inline-block;
+  margin: 10px;
+  color: #262B27;
+}
+
+iframe {
+  width: 100%;
+  height: 500px;
+  border: none;
+}
+
+.red {
+  color: #dd2B26;
+}

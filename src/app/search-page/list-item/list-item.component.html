@@ -1,0 +1,27 @@
+<li class="clearfix"
+    [ngClass]="{'added': item.isAdded, 'marked': isMarked}"
+    (click)="onToggle()"
+    appHover>
+  <div class="list-left">
+    <img [src]="item.thumb">
+  </div>
+  <div class="list-right">
+    <h3 (click)="onView()">{{item.title}}</h3>
+    <small>By
+      <span appRedText>{{item.channelTitle}}</span> on {{item.publishedAt}}
+    </small>
+    <p>{{item.description | slice:0:150}}</p>
+  </div>
+  <div class="action" *ngIf="isMarked">
+    <input [disabled]="item.isAdded"
+           type="button"
+           class="add"
+           [value]="item.isAdded ? 'Добавлено' : 'Добавить в избранное'"
+           (click)="onAdd()"/>
+    <input type="button"
+           value="Удалить"
+           class="delete"
+           (click)="onDelete()"
+           />
+  </div>
+</li>

@@ -54,6 +54,7 @@
     }
   },
   "defaults": {
+    "lintfix": false,
     "styleExt": "css",
     "component": {}
   }
